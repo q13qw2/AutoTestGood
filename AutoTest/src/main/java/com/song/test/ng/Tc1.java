@@ -3,6 +3,7 @@ package com.song.test.ng;
 import com.song.test.poi.ExcelUtil;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import com.song.test.utils.JdbcUtils;
 import org.testng.internal.reflect.MethodMatcherException;
 
 /**
@@ -29,4 +30,8 @@ public class Tc1 {
 
        return arrayCellValue;
    }
+
+    public static void main(String[] args) {
+        JdbcUtils.query();
+    }
 }

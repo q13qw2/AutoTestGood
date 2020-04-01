@@ -16,6 +16,7 @@ public class AutoLog {
     /**  构造方法 **/
     public AutoLog() {
     }
+
     public AutoLog(int id, String testCase, String reqType, String reqUrl, String reqData, String expResult, String actResult, int result, String execTime) {
         this.id = id;
         this.testCase = testCase;

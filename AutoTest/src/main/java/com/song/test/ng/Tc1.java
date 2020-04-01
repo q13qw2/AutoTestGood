@@ -2,9 +2,10 @@ package com.song.test.ng;
 
 import com.song.test.model.AutoLog;
 import com.song.test.poi.ExcelUtil;
+import com.song.test.utils.DpcpUtils;
+import com.song.test.utils.JdbcUtils;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import com.song.test.utils.JdbcUtils;
 import org.testng.internal.reflect.MethodMatcherException;
 
 import java.util.ArrayList;
@@ -42,6 +43,7 @@ public class Tc1 {
 
     }
 
+
     public static void jdbcUpdate(){
         // 测试 jdbcUpdate方法
 //        String updateSql = "update autolog set testCase='ceshi' where id = ?";
@@ -67,8 +69,8 @@ public class Tc1 {
         autoLog1.setExecTime("2020-03-30");
         list.add(autoLog1);
 
-        int[] rowCount = JdbcUtils.jdbcUpdateBatch(list, updateInsertInto);
-        System.out.println("共插入"+rowCount+"条数据");
+        int[] rowCount = DpcpUtils.dpcpBatchUpdate(list, updateInsertInto);
+        System.out.println("共插入"+rowCount.length+"条数据");
     }
 
     public static void jdbcQuery(){

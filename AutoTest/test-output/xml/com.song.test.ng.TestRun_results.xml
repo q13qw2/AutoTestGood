@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="接口自动化"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.817">
+  <properties />
+  
+  
+            <testcase name="test" time="0.154" classname="com.song.test.ng.TestRun" />
+                <testcase name="test" time="0.663" classname="com.song.test.ng.TestRun" />
+      
+</testsuite>

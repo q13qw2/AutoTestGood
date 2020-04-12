@@ -36,8 +36,7 @@ public class Tc2 {
 
     @DataProvider(name = "testResouse")
     public Object[][] dataResouse(){
-        Object[][] datas = new ExcelUtil(this.fileName,2).getArrayCellValue(1);
-        Utils.outPutTwoArrayToString(datas);
+        Object[][] datas = null;
         return datas;
     }
 

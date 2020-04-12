@@ -30,8 +30,7 @@ public class Tc1 {
 
    @DataProvider(name = "testCaseData",parallel = false)
    public Object[][] dp() {
-       ExcelUtil excelUtil = new ExcelUtil("C:\\Users\\JackieSong\\Desktop\\123.xlsx",2);
-       Object[][] arrayCellValue = excelUtil.getArrayCellValue(1);
+       Object[][] arrayCellValue = ExcelUtil.getArrayCellValue(1);
 
        return arrayCellValue;
    }

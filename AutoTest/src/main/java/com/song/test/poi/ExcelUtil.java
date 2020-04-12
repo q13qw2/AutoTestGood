@@ -3,6 +3,8 @@ package com.song.test.poi;
 import java.io.FileInputStream;
 import java.io.InputStream;
 
+import com.song.test.model.Config;
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -16,22 +18,13 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
  * 注意：本内容仅限于优测教育内部传阅，禁止外泄以及用于其他的商业目
  */
 public class ExcelUtil {
-	
+
 	/**
 	 * 初始化
 	 */
-	private  String fileName = null;
+	private static String fileName = Config.EXCEL_NAME;
 	
-	/**
-	 * @Title:  Test   
-	 * @Description:    TODO 
-	 * @param:  @param fileName  
-	 * @throws
-	 */
-	public ExcelUtil(String fileName, int i){
-		this.fileName = fileName;
-	}
-	
+
 	/**
 	 * @Title: getWb   
 	 * @Description: TODO
@@ -39,11 +32,10 @@ public class ExcelUtil {
 	 * @return: Workbook      
 	 * @throws
 	 */
-	public  Workbook getWb(){
+	public static Workbook getWb(){
 		
 		//初始化返回值
 		Workbook wb = null;
-		
 		
 		try{
 			InputStream inputStream = new FileInputStream(fileName);
@@ -57,7 +49,6 @@ public class ExcelUtil {
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-
 		return wb;
 	}
 	
@@ -69,7 +60,7 @@ public class ExcelUtil {
 	 * @return: Sheet      
 	 * @throws
 	 */
-	public  Sheet getSheet(int index){
+	public static Sheet getSheet(int index){
 		//初始化返回值
 		Sheet sheet = null;
 		
@@ -119,7 +110,7 @@ public class ExcelUtil {
 	 * @return: Object      
 	 * @throws
 	 */
-	public  Object fromCellTypeGetCellValue(Cell cell){
+	public static Object fromCellTypeGetCellValue(Cell cell){
 		
 		//初始化返回值
 		Object value = null;
@@ -161,7 +152,7 @@ public class ExcelUtil {
 	 * @return: Object[][]      
 	 * @throws
 	 */
-	public  Object[][] getArrayCellValue(int sheetIndex){
+	public static Object[][] getArrayCellValue(int sheetIndex){
 		
 		//初始化返回值
 		Object[][] testCaseData = null;
@@ -169,11 +160,12 @@ public class ExcelUtil {
 		try{
 			//用例总行数
 			int totalRowIndex = getSheet(sheetIndex).getLastRowNum();
+
 			testCaseData  = new Object[totalRowIndex][10];
 
 	        for(int rowIndex = 0; rowIndex < totalRowIndex; rowIndex++){
 	        	//通过sheet指定到rowIndex那行
-	            Row row = getSheet(sheetIndex).getRow(rowIndex);
+	            Row row = getSheet(sheetIndex).getRow(rowIndex+1);
 	            
 	            //空行跳过
 	            if(row == null){
@@ -196,10 +188,6 @@ public class ExcelUtil {
 		}
 		
 		return testCaseData;
-	}
-	
-	public static void main(String[] args) {
-		
 	}
 
 }

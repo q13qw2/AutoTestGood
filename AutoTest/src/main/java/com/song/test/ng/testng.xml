@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="飞天诚信" parallel="false">
-    <parameter name="fileNameParameter" value="/Users/jackie/Desktop/app_testcase.xlsx"></parameter>
+    <!--<parameter name="fileNameParameter" value="/Users/jackie/Desktop/app_testcase.xlsx"></parameter> -->
     <test name="接口自动化">
         <classes>
-            <class name="com.song.test.ng.Tc2"/>
+            <class name="com.song.test.ng.TestRun"/>
         </classes>
     </test>
 

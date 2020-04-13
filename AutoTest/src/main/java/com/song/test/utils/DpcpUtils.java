@@ -24,10 +24,10 @@ public class DpcpUtils {
                 dataSource.setDriverClassName("com.mysql.jdbc.Driver");
                 dataSource.setUrl("jdbc:mysql://127.0.0.1:3306/interface?characterEncoding=UTF-8&useSSL=false");
                 dataSource.setUsername("root");
-                dataSource.setPassword("12345678");
+//                dataSource.setPassword("12345678");
 
 //                dataSource.setUrl("jdbc:mysql://127.0.0.1:3306/interface?characterEncoding=UTF-8");
-//                dataSource.setPassword("123321");
+                dataSource.setPassword("123321");
 
                 // 连接池配置信息
                 /** 初始化连接数 **/

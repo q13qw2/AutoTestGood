@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
+<head>
+  <title>Test Results Report - 接口自动化</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link href="reportng.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="reportng.js"></script>
+</head>
+<body>
+<h1>接口自动化</h1>
+<p>
+  测试耗时: 2.597s
+</p>
+
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header failed">失败的测试</th></tr>
+          <tr>
+        <td colspan="1" class="group">com.song.test.ng.TestRun</td>
+        <td colspan="1" class="group">耗时</td>
+        <td colspan="1" class="group">日志</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  httpReq
+      </td>
+  <td class="duration">
+    1.537s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">"1", "YES", "登录", "POST", "http://www.nuandao.com", "/public/lazyentrance", "isajax=1&remember=1&email=1477222170@qq.com&password=xxxx&agreeterms=1&itype=&book=1&m=0.5847381962604788", "status=1;checktype=1", "YES", ""</span><br />
+    
+        
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>com.alibaba.fastjson.JSONPathException: illeal jsonpath syntax. $,{status}</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              com.alibaba.fastjson.JSONPath$JSONPathParser.readName(JSONPath.java:1578)<br />
+              com.alibaba.fastjson.JSONPath$JSONPathParser.readSegement(JSONPath.java:763)<br />
+              com.alibaba.fastjson.JSONPath$JSONPathParser.explain(JSONPath.java:1642)<br />
+              com.alibaba.fastjson.JSONPath.init(JSONPath.java:61)<br />
+              com.alibaba.fastjson.JSONPath.contains(JSONPath.java:158)<br />
+              com.alibaba.fastjson.JSONPath.contains(JSONPath.java:483)<br />
+              com.song.test.ng.TestRun.httpReq(TestRun.java:63)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:497)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)<br />
+              org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)<br />
+              org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)<br />
+              org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br />
+              org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)<br />
+              org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br />
+              org.testng.TestRunner$$Lambda$51/394714818.accept(Unknown Source)<br />
+              java.util.ArrayList.forEach(ArrayList.java:1249)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:766)<br />
+              org.testng.TestRunner.run(TestRunner.java:587)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:384)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:286)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1109)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1039)<br />
+              org.testng.TestNG.run(TestNG.java:1007)<br />
+              org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)<br />
+              org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)<br />
+                </div>
+      </td>
+</tr>
+      </table>
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header passed">通过的测试</th></tr>
+          <tr>
+        <td colspan="1" class="group">com.song.test.ng.TestRun</td>
+        <td colspan="1" class="group">耗时</td>
+        <td colspan="1" class="group">日志</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  httpReq
+      </td>
+  <td class="duration">
+    0.178s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">"2", "YES", "购物车", "POST", "http://www.nuandao.com", "/shopping/cart", "countdown=${/public/lazyentrance:status}&m=${__Random(,)}", "status=null", "NO", ""</span><br />
+    
+        
+
+      </td>
+</tr>
+      </table>
+  
+</body>
+</html>

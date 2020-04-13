@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="接口自动化"
+           tests="2"
+           failures="1"
+           errors="0"
+           skipped="0"
+           time="1.715">
+  <properties />
+            <testcase name="httpReq" time="1.537" classname="com.song.test.ng.TestRun">
+                <failure type="com.alibaba.fastjson.JSONPathException"
+                  message="illeal jsonpath syntax. $,{status}"
+              >
+<![CDATA[com.alibaba.fastjson.JSONPathException: illeal jsonpath syntax. $,{status}
+  com.alibaba.fastjson.JSONPath$JSONPathParser.readName(JSONPath.java:1578)
+  com.alibaba.fastjson.JSONPath$JSONPathParser.readSegement(JSONPath.java:763)
+  com.alibaba.fastjson.JSONPath$JSONPathParser.explain(JSONPath.java:1642)
+  com.alibaba.fastjson.JSONPath.init(JSONPath.java:61)
+  com.alibaba.fastjson.JSONPath.contains(JSONPath.java:158)
+  com.alibaba.fastjson.JSONPath.contains(JSONPath.java:483)
+  com.song.test.ng.TestRun.httpReq(TestRun.java:63)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:497)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+  org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+  org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+  org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+  org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+  org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+  org.testng.TestRunner$$Lambda$51/394714818.accept(Unknown Source)
+  java.util.ArrayList.forEach(ArrayList.java:1249)
+  org.testng.TestRunner.privateRun(TestRunner.java:766)
+  org.testng.TestRunner.run(TestRunner.java:587)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+  org.testng.SuiteRunner.run(SuiteRunner.java:286)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+  org.testng.TestNG.runSuites(TestNG.java:1039)
+  org.testng.TestNG.run(TestNG.java:1007)
+  org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)
+  org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+]]>
+      </failure>
+
+          </testcase>
+  
+  
+            <testcase name="httpReq" time="0.178" classname="com.song.test.ng.TestRun" />
+      
+</testsuite>
